@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-weight: 900;
+        }
+        body{
+            /* border: 2px solid blue; */
+            width: 95vw;
+            margin: 10px auto;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 56px 96px 40px 1fr 96px;
+            gap: 10px;
+        }
+
+        .container{
+            background-color: gray;
+            /* border: 2px solid violet; */
+            grid-column-start: 1;
+            grid-column-end: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* grid-template-rows: 40px 60px 100px 200px; */
+            gap: 10px;
+            width: 95vw;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+            height: 40px;
+            background-color: gray;
+            align-self: center;
+        }
+        .item_main{
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main_container{
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .Quick{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .main{
+            background-color: white;
+        }
+        .para{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+    <title>Layout</title>
+</head>
+<body>
+    <div class="container logo">Company Logo and Slogan</div>
+    <header class="container">Header</header>
+    <nav class="container nav"><div class="item para"><p>Nevagation</p></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div></nav>
+    <main class="container main">
+        <div class="main_container">
+            <div class="item_main section"><p>Quick Links</p></div>
+            <div class="item_main Quick"><p>section</p></div>
+            <div class="item_main link"><p>Quick Links</p></div>
+        </div>
+    </main>
+    <footer class="container">Footer</footer>
+</body>
+</html>
